@@ -1,3 +1,8 @@
+<div class="betterheader" role="banner">
+      <h1 class="project-name">GreenFrog</h1>
+</div>
+
+
 ## API docs
 
 ### Plugin structure
