@@ -22,7 +22,6 @@ const GameMode = require("../src/player/GameMode");
 const Logger = require("../src/server/Logger"); // Creates logger for this plugin
 const Form = require("../src/player/Form");
 
-
 // REMEMBER: You can remove events that you don't use
 
 // This is a simple plugin that showcases the GreenFrog's api
