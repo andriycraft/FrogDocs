@@ -1,3 +1,3 @@
 ## GreenFrog API
 
-Example plugin > https://github.com/andriycraft/GreenFrogMCBE/data/ExamplePlugin/
+Example plugin > <a href="./data/ExamplePlugin/">Click to open</a>
