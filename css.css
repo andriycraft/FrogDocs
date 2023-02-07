@@ -1,3 +1,8 @@
 .btn, site-footer {
   display: none
 }
+
+header {
+  background: rgb(32,36,48);
+  background: linear-gradient(90deg, rgba(32,36,48,1) 0%, rgba(110,15,70,1) 82%);
+}
