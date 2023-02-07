@@ -1,50 +1,33 @@
-<html lang="en-US"><head>
-    <meta charset="UTF-8">
+<!DOCTYPE html>
+<html lang="en-US">
 
-<!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>FrogDocs</title>
-<meta name="generator" content="Jekyll v3.9.3">
-<meta property="og:title" content="FrogDocs">
-<meta property="og:locale" content="en_US">
-<link rel="canonical" href="https://andriycraft.github.io/FrogDocs/">
-<meta property="og:url" content="https://andriycraft.github.io/FrogDocs/">
-<meta property="og:site_name" content="FrogDocs">
-<meta property="og:type" content="website">
-<meta name="twitter:card" content="summary">
-<meta property="twitter:title" content="FrogDocs">
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","headline":"FrogDocs","name":"FrogDocs","url":"https://andriycraft.github.io/FrogDocs/"}</script>
-<!-- End Jekyll SEO tag -->
-    <link href="/FrogDocs/assets/css/css.css" rel="stylesheet"></link>
-    <link rel="stylesheet" href="/FrogDocs/assets/css/style.css?v=ad7add7879d140ab729a93de9872a56b2892c2c6">
-    
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;display=swap" as="style" type="text/css" crossorigin="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#157878">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <link rel="stylesheet" href="/FrogDocs/assets/css/style.css?v=ad7add7879d140ab729a93de9872a56b2892c2c6">
-    <link href="/FrogDocs/css.css" rel="stylesheet">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FrogDocs</title>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","headline":"FrogDocs","name":"FrogDocs","url":"https://andriycraft.github.io/FrogDocs/"}</script>
+  <link href="/FrogDocs/assets/css/css.css" rel="stylesheet">
+  <link rel="stylesheet" href="/FrogDocs/assets/css/style.css?v=ad7add7879d140ab729a93de9872a56b2892c2c6">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;display=swap" as="style" type="text/css" crossorigin="">
+</head>
 
-  </head>
-  <body>
-    
+<body>
+  <header>
+    <h1 class="project-name">GreenFrog</h1>
+  </header>
+  <main id="content" class="main-content" role="main">
 
-    
-<div style="color: #fff; text-align: center; padding: 25px;" class="betterheader" role="banner">
-      <h1 class="project-name">GreenFrog</h1>
-</div>
 
-    <main id="content" class="main-content" role="main">
-      
+    <h2 id="api-docs">API docs</h2>
 
-<h2 id="api-docs">API docs</h2>
+    <h3 id="plugin-structure">Plugin structure</h3>
 
-<h3 id="plugin-structure">Plugin structure</h3>
+    <p>package.json:</p>
 
-<p>package.json:</p>
-
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    <div class="language-json highlighter-rouge">
+      <div class="highlight">
+        <pre class="highlight"><code><span class="p">{</span><span class="w">
     </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"exampleplugin"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"main"</span><span class="p">:</span><span class="w"> </span><span class="s2">"exampleplugin.js"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.0.0"</span><span class="p">,</span><span class="w">
@@ -52,11 +35,15 @@
     </span><span class="nl">"author"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Me"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Example plugin to test GreenFrog API"</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div></div>
+</span></code></pre>
+      </div>
+    </div>
 
-<p>code:</p>
+    <p>code:</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+    <div class="language-javascript highlighter-rouge">
+      <div class="highlight">
+        <pre class="highlight"><code><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
   <span class="na">name</span><span class="p">:</span> <span class="dl">"</span><span class="s2">ExamplePlugin</span><span class="dl">"</span><span class="p">,</span>
   <span class="na">version</span><span class="p">:</span> <span class="dl">"</span><span class="s2">1.0</span><span class="dl">"</span><span class="p">,</span> 
 
@@ -68,23 +55,17 @@
     <span class="nx">Logger</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">`</span><span class="p">${</span><span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="p">}</span><span class="s2"> &gt; Good bye!`</span><span class="p">);</span>
   <span class="p">},</span>
 <span class="p">};</span>
-</code></pre></div></div>
+</code></pre>
+      </div>
+    </div>
 
-<h3 id="examples">Examples</h3>
+    <h3 id="examples">Examples</h3>
 
-<ol>
-  <li>Main example plugin &gt; <a href="./data/ExamplePlugin/">Click to open</a></li>
-  <li>Send a simple “Hello, world” message on join &gt; <a href="./data/SimpleOnJoin/">Click to open</a></li>
-</ol>
+    <ol>
+      <li>Main example plugin &gt; <a href="./data/ExamplePlugin/">Click to open</a></li>
+      <li>Send a simple “Hello, world” message on join &gt; <a href="./data/SimpleOnJoin/">Click to open</a></li>
+    </ol>
+  </main>
+</body>
 
-
-      <footer class="site-footer">
-        
-          <span class="site-footer-owner"><a href="https://github.com/andriycraft/FrogDocs">FrogDocs</a> is maintained by <a href="https://github.com/andriycraft">andriycraft</a>.</span>
-        
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
-      </footer>
-    </main>
-  
-
-</body></html>
+</html>
