@@ -22,9 +22,10 @@ const GameMode = require("../src/player/GameMode");
 const Logger = require("../src/server/Logger"); // Creates logger for this plugin
 const Form = require("../src/player/Form");
 
-// For advanced docs look at API.md in /docs/api.md
 
-// This is a simple plugin that tests the GreenFrog's api
+// REMEMBER: You can remove events that you don't use
+
+// This is a simple plugin that showcases the GreenFrog's api
 // Another example: https://github.com/andriycraft/GreenFrogMCBE/blob/main/plugins/DonationReminder.js
 
 module.exports = {
@@ -40,10 +41,8 @@ module.exports = {
   },
 
   onJoin(server, client) {
-    // This code executes when player joined
+    // This code executes when player joined the server
   },
-
-  // REMEMBER: You can just remove events that you don't use
 
   onLeave(server, client) {
     // This code executes when player left the server
@@ -59,22 +58,26 @@ module.exports = {
   },
 
   onPlayerSpawn(server, client) {
+    // This code executes when player is spawned (this event executes after onJoin() event)
+
     // Registers a command
+    // addCommand syntax: ("name", "description")
     const cmdmanager = new CommandManager();
-    cmdmanager.addCommand(client, "testcommand", "This is my first command!");
+    cmdmanager.addCommand(
+       client, 
+       "testcommand",
+       "This is my first command!"
+     );
     cmdmanager.addCommand(
       client,
       "stopserver",
-      "Stop server command that is registered by the example plugin"
+      "Command that showcases the shutdownapi"
     );
-    // addCommand syntax: ("name", "description")
-
-    // This code executes when player is spawned (this event executes after onJoin() event)
   },
 
   onChat(server, client, message) {
-    client.sendMessage(client, "Your just sent a chat message: " + message);
     // This code executes when player uses chat
+    client.sendMessage(client, "Your just sent a chat message: " + message);
   },
 
   onCommand(server, client, command) {
@@ -104,11 +107,10 @@ module.exports = {
         form.type = "form";
         form.send(client);
 
-        //              ^ title ^ toast description/body
         client.setTime(17000); // Updates the client time
         setTimeout(() => {
           if (!client.offline) {
-            // Make sure to check if the client is still online after doing setTimeout() that uses client API in production plugins
+            // Make sure to check if the client is still online after doing setTimeout() or setInterval() that uses client API in production plugins
             client.transfer("172.0.0.1", 19132); // Moves player to another server
             //              ^ ip         ^ port
           }
