@@ -30,7 +30,40 @@ client.chat("This message was sent by plugin")
 // Sending message to client
 const Chat = require("../src/player/Chat.js");
 
-Chat.broadcastMessage("This is a broadcase")
+Chat.broadcastMessage("This is a broadcast")
+
+// If you want to send a message with colors:
+
+const Chat = require("../src/player/Chat.js");
+const Colors = require("../src/player/Colors");
+
+Chat.broadcastMessage(Colors.red + "This is a broadcast")
+// -------------------------------------
+
+// -------------------------------------
+// Color list
+
+black: "§0",
+dark_blue: "§1",
+dark_green: "§2",
+dark_aqua: "§3",
+dark_red: "§4",
+dark_purple: "§5",
+gold: "§6",
+gray: "§7",
+dark_gray: "§8",
+blue: "§9",
+green: "§a",
+red: "§c",
+light_purple: "§d",
+yellow: "§e",
+white: "§f",
+obfuscated: "§k",
+bold: "§l",
+italic: "§o",
+reset: "§r",
+char: "§",
+
 // -------------------------------------
 ```
 
