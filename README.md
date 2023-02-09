@@ -5,6 +5,9 @@ Event list & example plugin are here: https://github.com/andriycraft/GreenFrogMC
 // -------------------------------------
 // Creating forms
 
+const Form = require("../../src/player/Form");
+const FormTypes = require("../../src/player/FormTypes");
+
 const form = new Form();
 // REMEMBER: FormTypes.FORM is also supported, but is has very limited functionality. FormTypes.CUSTOMFORM is better
 form.type = FormTypes.CUSTOMFORM
