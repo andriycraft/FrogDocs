@@ -5,24 +5,33 @@ Event list & example plugin are here: https://github.com/andriycraft/GreenFrogMC
 ### Plugin structure
 
 ```javascript
-const BasePlugin = require("../src/plugins/BasePlugin");
-
-class YourPlugin extends BasePlugin {
-  constructor() {}
-
-  getName() {
-    return "YourPlugin";
-  }
-  getVersion() {
-    return "1.0";
-  }
+// YourPlugin.js
+module.exports = {
+  name: "UrPlugin", // Your plugin name
+  version: "1.3", // Your plugin version
 
   onLoad() {
-    // ...
-  }
+    //...
+  },
+
+  onShutdown() {
+    //...
+  },
 }
 
 module.exports = YourPlugin;
+```
+
+```json
+// package.json
+{
+  "name": "UrPlugin",
+  "main": "index.js",
+  "version": "1.0.0",
+  "displayName": "Your plugin",
+  "author": "Me",
+  "description": "plugin that does stuff"
+}
 ```
 
 ### Log levels
