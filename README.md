@@ -3,10 +3,10 @@
 Event list & example plugin are here: https://github.com/andriycraft/GreenFrogMCBE/blob/main/docs/plugins/exampleplugin/exampleplugin.js
 ```javascript
 // -------------------------------------
-// Transfer players
+// Updates time
 
-player.transfer("172.0.0.1", 19132);
-//               ^ ip        ^ port
+player.setTime(17000);
+//             ^ time
 
 // -------------------------------------
 ```
