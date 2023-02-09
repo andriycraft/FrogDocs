@@ -3,32 +3,27 @@
 Event list & example plugin are here: https://github.com/andriycraft/GreenFrogMCBE/blob/main/docs/plugins/exampleplugin/exampleplugin.js
 ```javascript
 // -------------------------------------
-// Creating forms
+// Creating commands
+const CommandManager = require("../../src/player/CommandManager");
 
-const Form = require("../../src/player/Form");
-const FormTypes = require("../../src/player/FormTypes");
+onPlayerSpawn(server, player) {
+    // Registers a command
+    const cmdmanager = new CommandManager();
+    cmdmanager.addCommand(player,
+       "testcommand", // Command name 
+       "This is my first command!" // Command description
+    );
+}
 
-const form = new Form();
-// REMEMBER: FormTypes.FORM is also supported, but is has very limited functionality (only support for text and buttons). FormTypes.CUSTOMFORM is better
-form.type = FormTypes.CUSTOMFORM
-form.title = "Title"
-form.id = 0
-form.buttons = [
-    { "text": "Button" } // All buttons are json
-]
-form.addInput("Hello, world", "Placeholder")
-//            ^ text          ^ placeholder
-form.addText("text")
-form.addDropdown("dropdown", [{"text": "Option 1"}])
-//               ^ dropdown  ^ options (null to disable)
-form.addToggle("Toggle")
-form.addSlider("slider", 0, 100, 50)
-//             ^ text   ^min^max ^ step
-form.send(player);
-
-// Form types list:
-// * FormTypes.FORM
-// * FormTypes.CUSTOMFORM
+onCommand(server, player, command) {
+    switch (command.toLowerCase()) {
+      case "/testcommand":
+         // Your code goes here
+         break;
+      default: 
+         break;
+    }
+}
 // -------------------------------------
 ```
 
