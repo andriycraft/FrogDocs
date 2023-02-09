@@ -3,16 +3,29 @@
 Event list & example plugin are here: https://github.com/andriycraft/GreenFrogMCBE/blob/main/docs/plugins/exampleplugin/exampleplugin.js
 ```javascript
 // -------------------------------------
-// Useful variables list
+// Creating forms
 
-// player.username returns the player's username
-// player.ip returns the player's ip without port
-// player.port returns the player's port
-// player.fullip returns player's ip and port
-// player.gamemode returns player's gamemode
-// player.offline checks if the player is online or not
-// player.op returns the player's op status
-// player.permlevel returns the player's permission level
+const form = new Form();
+// REMEMBER: FormTypes.FORM is also supported, but is has very limited functionality. FormTypes.CUSTOMFORM is better
+form.type = FormTypes.CUSTOMFORM
+form.title = "Title"
+form.id = 0
+form.buttons = [
+    { "text": "Button" } // All buttons are json
+]
+form.addInput("Hello, world", "Placeholder")
+//            ^ text          ^ placeholder
+form.addText("text")
+form.addDropdown("dropdown", [{"text": "Option 1"}])
+//               ^ dropdown  ^ options (null to disable)
+form.addToggle("Toggle")
+form.addSlider("slider", 0, 100, 50)
+//             ^ text   ^min^max ^ step
+form.send(player);
+
+// Form types list:
+// * FormTypes.FORM
+// * FormTypes.CUSTOMFORM
 // -------------------------------------
 ```
 
