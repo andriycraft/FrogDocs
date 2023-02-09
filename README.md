@@ -3,19 +3,12 @@
 Event list & example plugin are here: https://github.com/andriycraft/GreenFrogMCBE/blob/main/docs/plugins/exampleplugin/exampleplugin.js
 ```javascript
 // -------------------------------------
-// Sending a message to client
-
-// Without colors:
-player.sendMessage("Hello World");
-
-// With colors:
-
-const Colors = require("../src/player/Colors");
-
-player.sendMessage(Colors.red + "This message is in red")
-
+const Colors = require("../src/server/Colors");
+const Logger = require("../src/server/Logger");
+						
+Logger.log(Colors.CONSOLE_GREEN + "Hello", "info")
 // -------------------------------------
-
+```
 
 
 // -------------------------------------
