@@ -2,10 +2,38 @@
 
 Event list & example plugin are here: https://github.com/andriycraft/GreenFrogMCBE/blob/main/docs/plugins/exampleplugin/exampleplugin.js
 ```javascript
-onPlayerSpawn(server, player) {
-  player.sendMessage("Hello World");
-} 
+// -------------------------------------
+// Sending a message to client
+
+// Without colors:
+player.sendMessage("Hello World");
+
+// With colors:
+
+const Colors = require("../src/player/Colors");
+
+player.sendMessage(Colors.red + "This message is in red")
+
+// -------------------------------------
+
+
+
+// -------------------------------------
+// Sending message as a client
+
+client.chat("This message was sent by plugin")
+
+// -------------------------------------
+
+
+// -------------------------------------
+// Sending message to client
+const Chat = require("../src/player/Chat.js");
+
+Chat.broadcastMessage("This is a broadcase")
+// -------------------------------------
 ```
+
 ### Plugin structure
 
 YourPlugin.js:
