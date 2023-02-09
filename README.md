@@ -3,12 +3,10 @@
 Event list & example plugin are here: https://github.com/andriycraft/GreenFrogMCBE/blob/main/docs/plugins/exampleplugin/exampleplugin.js
 ```javascript
 // -------------------------------------
-// Updates gamemode
+// Shutting down server
 
-const GameMode = require("../src/player/GameMode");
-
-player.setGamemode(GameMode.CREATIVE);
-// Valid gamemodes are: "creative", "survival", "adventure", "spectator" or "fallback"
+const ShutdownAPI = require("../src/server/ShutdownAPI");
+ShutdownAPI.shutdownServer();
 // -------------------------------------
 ```
 
