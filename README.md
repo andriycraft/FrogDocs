@@ -3,10 +3,26 @@
 Event list & example plugin are here: https://github.com/andriycraft/GreenFrogMCBE/blob/main/docs/plugins/exampleplugin/exampleplugin.js
 ```javascript
 // -------------------------------------
-// Shutting down server
+// Creating commands
 
-const ShutdownAPI = require("../src/server/ShutdownAPI");
-ShutdownAPI.shutdownServer();
+onPlayerSpawn(server, player) {
+    // Registers a command
+    const cmdmanager = new CommandManager();
+    cmdmanager.addCommand(player,
+       "testcommand", // Command name 
+       "This is my first command!" // Command description
+    );
+}
+
+onCommand(server, player, command) {
+    switch (command.toLowerCase()) {
+      case "/testcommand":
+         // Your code goes here
+         break;
+       default: 
+         break;
+    }
+}
 // -------------------------------------
 ```
 
