@@ -3,10 +3,19 @@
 Event list & example plugin are here: https://github.com/andriycraft/GreenFrogMCBE/blob/main/docs/plugins/exampleplugin/exampleplugin.js
 ```javascript
 // -------------------------------------
+// Logging with colors
 const Colors = require("../src/server/Colors");
 const Logger = require("../src/server/Logger");
 						
 Logger.log(Colors.CONSOLE_GREEN + "Hello", "info")
+
+// Colors list
+
+CONSOLE_RESET: "\x1b[0m",
+CONSOLE_BLUE: "\x1b[34m",
+CONSOLE_YELLOW: "\x1b[33m",
+CONSOLE_RED: "\x1b[31m",
+CONSOLE_GREEN: "\x1b[32m",
 // -------------------------------------
 ```
 
