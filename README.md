@@ -9,7 +9,7 @@ const Form = require("../../src/player/Form");
 const FormTypes = require("../../src/player/FormTypes");
 
 const form = new Form();
-// REMEMBER: FormTypes.FORM is also supported, but is has very limited functionality. FormTypes.CUSTOMFORM is better
+// REMEMBER: FormTypes.FORM is also supported, but is has very limited functionality (only support for text and buttons). FormTypes.CUSTOMFORM is better
 form.type = FormTypes.CUSTOMFORM
 form.title = "Title"
 form.id = 0
