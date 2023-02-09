@@ -1,9 +1,15 @@
 ## GreenFrog API
 
 Event list & example plugin are here: https://github.com/andriycraft/GreenFrogMCBE/blob/main/docs/plugins/exampleplugin/exampleplugin.js
-```
-rrrrrrrrrrrrrrrrrrrrrrrrrr
+```javascript
+// Put this into the start of your file
+const Logger = require("../src/server/Logger");
 
+// Put this somewhere into event handler
+Logger.log("This message will be shown up only if debug is enabled", "debug");
+Logger.log("This is an info", "info");
+Logger.log("This is a warning", "warn");
+Logger.log("This is an error", "error");
 ```
 ### Plugin structure
 
