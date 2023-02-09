@@ -3,18 +3,10 @@
 Event list & example plugin are here: https://github.com/andriycraft/GreenFrogMCBE/blob/main/docs/plugins/exampleplugin/exampleplugin.js
 ```javascript
 // -------------------------------------
-// Kicking players
+// Transfer players
 
-player.kick("kicked")
-
-// Kicking players with colors in the reason
-
-const Colors = require("../src/player/Colors");
-
-player.kick(Colors.red + "kicked")
-
-// FORCE DISCONNECT THE CLIENT - BREAKS OTHER PLUGINS AND ONKICK() EVENT
-player.disconnect("kicked")
+player.transfer("172.0.0.1", 19132);
+//               ^ ip        ^ port
 
 // -------------------------------------
 ```
