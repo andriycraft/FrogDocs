@@ -4,8 +4,8 @@ Event list & example plugin are here: https://github.com/andriycraft/GreenFrogMC
 
 ### Plugin structure
 
+YourPlugin.js:
 ```javascript
-// YourPlugin.js
 module.exports = {
   name: "UrPlugin", // Your plugin name
   version: "1.3", // Your plugin version
@@ -22,8 +22,8 @@ module.exports = {
 module.exports = YourPlugin;
 ```
 
+package.json
 ```json
-// package.json
 {
   "name": "UrPlugin",
   "main": "index.js",
